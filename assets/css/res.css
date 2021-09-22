@@ -40,6 +40,10 @@
     display: none;
   }
   .twitter_img {
-    height: auto;
+    padding: 4rem !important;
+  }
+
+  .twitter_img i {
+    font-size: 4rem !important;
   }
 }
