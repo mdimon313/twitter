@@ -4,17 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
     <!-- custom file -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- title -->
-    <title>Welcome to Twitter</title>
+    <title>Home/Twitter</title>
   </head>
   <body>
-    <div class="container">
-      <a href="./login.html" class="click">click</a>
-    </div>
+    <main class="container">
+      <!-- start left side -->
+
+      <nav class="nav">
+        <div class="logo">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <!-- ul -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Notification</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Bookmark</a></li>
+          <li><a href="#">Lists</a></li>
+          <li><a href="#">profile</a></li>
+          <li><a href="#">more</a></li>
+        </ul>
+
+        <!-- Tweet btn -->
+        <button type="button">Tweet</button>
+
+        <!-- account -->
+
+        <div class="accounts">
+          <div class="user_profile">
+            <img
+              src="./assets/img/twt_400x400.jpg"
+              style="width: 400"
+              alt="user image"
+            />
+          </div>
+          <div class="user_name">
+            <h4 class="display_name">Mohammd Imon</h4>
+            <span class="userName">@MohammdImon313</span>
+          </div>
+          <div class="more">
+            <img src="./assets/img/more-horizontal.svg" alt="more" />
+          </div>
+        </div>
+      </nav>
+      <!-- end left side -->
+
+      <!-- start middle -->
+      <div class="main_content">
+        <div class="header">
+          <a href="#" class="home">Home</a>
+          <img src="./assets/img/star.svg" alt="" />
+        </div>
+      </div>
+      <!-- end middle -->
+
+      <!-- start right side -->
+      <!-- end right side -->
+    </main>
 
     <!-- script js -->
     <script src="./assets/js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

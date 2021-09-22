@@ -9,8 +9,8 @@
 }
 
 :root {
-  --color-primary: #45a0f5;
-  --color-primary-alt: #08afd2;
+  --color-primary: #399bf0;
+  --color-primary-alt: #45a0f5;
 
   --font-default: sans-serif;
   --font-regular: 400;
@@ -24,15 +24,11 @@ body {
   scroll-behavior: smooth;
   /* overflow-x: hidden; */
   min-height: 100vh;
-  display: grid;
-  place-items: center;
 }
 
 .container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(300px, 1fr, 1fr);
 }
 
 section {
@@ -76,7 +72,7 @@ a {
 }
 .logo i {
   color: var(--color-primary);
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .twitter_img {
@@ -164,7 +160,6 @@ a.click {
   background-color: transparent;
   width: 50%;
   height: 40px;
-  /* line-height: 30px; */
   border-radius: 20px;
   font-size: 0.79rem;
   font-family: var(--font-default);
@@ -208,6 +203,8 @@ a.click {
   font-size: 1rem;
   color: #1f1c1c;
 }
+
+/* main */
 
 /* footer */
 .footer {
