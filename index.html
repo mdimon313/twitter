@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="./assets/css/all.min.css" />
     <!-- custom file -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -17,25 +16,43 @@
     <main class="container">
       <!-- start left side -->
 
-      <nav class="nav">
+      <nav class="nav left_sidebar">
         <div class="logo">
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
         <!-- ul -->
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">Notification</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">Bookmark</a></li>
-          <li><a href="#">Lists</a></li>
-          <li><a href="#">profile</a></li>
-          <li><a href="#">more</a></li>
+          <li>
+            <a href="#" class="active"><i class="fas fa-home-alt"></i> Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-hashtag"></i> Explore</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-bell"></i>Notification</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-envelope"></i>Messages</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-bookmark"></i>Bookmark</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-ballot"></i>Lists</a>
+          </li>
+          <li>
+            <a href="#"><i class="fal fa-user"></i>profile</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fal fa-ellipsis-h" id="ico_circle"></i>more</a
+            >
+          </li>
         </ul>
 
         <!-- Tweet btn -->
-        <button type="button">Tweet</button>
+        <button type="button" class="btn_tweet">Tweet</button>
 
         <!-- account -->
 
@@ -52,7 +69,7 @@
             <span class="userName">@MohammdImon313</span>
           </div>
           <div class="more">
-            <img src="./assets/img/more-horizontal.svg" alt="more" />
+            <i class="fal fa-ellipsis-h"></i>
           </div>
         </div>
       </nav>
@@ -62,19 +79,109 @@
       <div class="main_content">
         <div class="header">
           <a href="#" class="home">Home</a>
-          <img src="./assets/img/star.svg" alt="" />
+          <i class="fal fa-stars"></i>
+        </div>
+
+        <!-- Write Post section -->
+        <div class="card">
+          <div class="profile">
+            <img src="./assets/img/twt_400x400.jpg" alt="profile" />
+          </div>
+          <div class="card_body">
+            <div class="write_post">
+              <textarea
+                class="textarea"
+                placeholder="What's Happening?"
+              ></textarea>
+              <button type="button">
+                <span><i class="fal fa-globe-europe"></i></span> Everyone can
+                reply
+              </button>
+            </div>
+            <hr />
+            <div class="icons">
+              <div class="icon">
+                <i class="fal fa-image-polaroid"></i>
+                <i class="fal fa-gift"></i>
+                <i class="fal fa-poll-h"></i>
+                <i class="fal fa-smile-beam"></i>
+                <i class="fal fa-calendar"></i>
+              </div>
+              <div class="button">
+                <button>Tweet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Area -->
+        <div class="post" id="post">
+          <!-- <div class="card">
+            <div class="profile">
+              <img src="./assets/img/twt_400x400.jpg" alt="profile" />
+            </div>
+            <div class="card_body">
+              <div class="names">
+                <h4 class="name">
+                  <a href="#"
+                    >Mohammd Imon
+                    <span class="u__name">@MohammdImon313 . </span>
+                  </a>
+                </h4>
+                <span id="time">1hr</span>
+              </div>
+
+              <div class="card_content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <br />
+                  বর্তমানে ওয়েব ডিজাইন এবং ডেভেলোপমেন্ট কাজের পরিধি অনেক। যারা
+                  ওয়েব নিয়ে কাজ শিখতে আগ্রহী, প্রযুক্তির সাথে তালমিলিয়ে স্কিল
+                  ডেভেলোপ করে বেকারমুক্ত সমৃদ্ধ বাংলাদেশ গড়ার অংশীদার হতে
+                </p>
+                <div class="card_img">
+                  <img src="./assets/img/twt_400x400.jpg" />
+                </div>
+              </div>
+
+              <div class="likes">
+                <span class="comment"
+                  ><i class="fal fa-comment"></i> <span>6</span></span
+                >
+
+                <span class="retweet"
+                  ><i class="fal fa-retweet"></i> <span></span
+                ></span>
+
+                <span class="heart"
+                  ><i class="fal fa-heart"></i> <span>202</span></span
+                >
+
+                <span class="share"
+                  ><i class="fal fa-upload"></i> <span></span
+                ></span>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
       <!-- end middle -->
 
       <!-- start right side -->
+      <div class="search right_sidebar">
+        <span class="search_icon"><i class="fal fa-search"></i></span>
+        <input
+          type="search"
+          name="search"
+          id="search_input"
+          placeholder="Search Twitter"
+        />
+      </div>
       <!-- end right side -->
     </main>
 
     <!-- script js -->
     <script src="./assets/js/script.js"></script>
-    <script>
-      feather.replace();
-    </script>
   </body>
 </html>

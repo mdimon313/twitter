@@ -22,14 +22,13 @@ body {
   font-family: var(--font-default);
   font-weight: var(--font-regular);
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
   min-height: 100vh;
 }
 
-.container {
+/* .container {
   display: grid;
-  grid-template-columns: repeat(300px, 1fr, 1fr);
-}
+  grid-template-columns: 350px auto 350px;
+} */
 
 section {
   padding: 5rem 0;
@@ -37,6 +36,7 @@ section {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 a {
@@ -45,6 +45,11 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .flex {
@@ -203,6 +208,385 @@ a.click {
   font-size: 1rem;
   color: #1f1c1c;
 }
+
+/* start left sidebar */
+.left_sidebar {
+  overflow: hidden;
+  padding: 0.5rem 2rem;
+  width: 22%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.nav .logo a i {
+  font-size: 2rem;
+}
+
+nav.nav .logo {
+  margin-bottom: 1rem;
+  padding: 0 24px;
+}
+
+ul li a {
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  border-radius: 30px;
+  color: #171616e8;
+  font-size: 21px;
+  display: inline-flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+ul li a i {
+  margin-right: 18px;
+}
+
+ul li {
+  display: block;
+  cursor: pointer;
+}
+
+ul li:hover a {
+  background-color: #ddd;
+}
+
+ul li a:focus,
+ul li a.active {
+  color: #000;
+  font-weight: 800;
+}
+
+button.btn_tweet {
+  margin: 0.5rem 0 3rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button.btn_tweet:hover {
+  background-color: #328cd8;
+}
+
+.accounts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.5rem;
+  border-radius: 45px;
+  cursor: crosshair;
+  transition: all 0.3s ease-in-out;
+}
+
+.accounts .user_profile {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.accounts .user_profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.user_name h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user_name .userName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+.user_name {
+  flex: 3;
+  padding: 0.5rem;
+}
+
+.more {
+  flex: 1;
+  text-align: right;
+}
+
+.more i {
+  font-size: 1.2rem;
+}
+
+.accounts:hover {
+  background-color: #e6e7e7;
+}
+
+/* end left sideBar */
+
+/* middle content */
+.main_content {
+  border: 1px solid #eeee;
+  width: 43%;
+  margin-left: 301px;
+}
+
+.main_content .header {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.main_content .header a {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.main_content .header a:hover {
+  color: #399bf0;
+}
+
+.main_content .header i {
+  font-size: 1.2rem;
+  transform: rotateY(180deg);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: 0.3s;
+  border-radius: 50%;
+  color: #333;
+}
+
+.main_content .header i:hover {
+  background-color: #ddd9;
+}
+
+/* write post  */
+
+textarea.textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  height: 100px;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.1rem;
+  background-color: transparent;
+}
+
+textarea.textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+textarea.textarea:focus {
+  border: none;
+}
+
+textarea.textarea::placeholder {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #898888;
+}
+
+.write_post button {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 35px;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  color: #399bf0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.write_post button:hover {
+  background-color: #e8f5fe;
+}
+
+hr {
+  margin-bottom: 1rem;
+  background: #eee;
+  height: 1px;
+  border: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons .icon i {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  margin-right: 0.8rem;
+  border-radius: 50%;
+  color: #399bf0;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.icons .icon {
+  display: flex;
+}
+
+.icons .icon i:hover {
+  background-color: #e8f5fe;
+}
+
+.icons .button button {
+  border: none;
+  outline: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #8ecdf7;
+}
+
+/* Tweet Post */
+
+.card {
+  width: 100%;
+  margin-bottom: 0.3rem;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.card:hover {
+  background-color: #f7f7f7;
+}
+
+.card_body {
+  width: 100%;
+  height: auto;
+}
+
+.card .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.card .profile {
+  padding: 0 10px 0 0;
+}
+
+.card_body .names h4 {
+  margin: 0;
+  padding: 0.5rem 0 0;
+  display: inline-block;
+  color: #333;
+}
+
+.card_body .names h4 a {
+  color: #333;
+}
+
+.card_body .names h4 a:hover {
+  text-decoration: underline !important;
+}
+.names {
+  margin-bottom: 0.8rem;
+}
+
+.name span.u__name {
+  color: #979696;
+  font-size: 15px;
+}
+
+.name a:hover span.u__name {
+  text-decoration: none !important;
+}
+
+.card_content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 300;
+  color: #333;
+  cursor: auto;
+}
+
+.card_img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.likes i {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.likes .comment i:hover {
+  background-color: #e1eef7;
+  color: #7ec4f3;
+}
+
+.likes .retweet i:hover {
+  background-color: #def1eb;
+  color: #3dbb7c;
+}
+
+.likes .heart i:hover {
+  background-color: #f8e0eb;
+  color: #f44a9b;
+}
+
+.likes .share i:hover {
+  background-color: #e1eef7;
+  color: #7ec4f3;
+}
+
+/* end middle content */
+
+/* Start Right sidebar */
+
+.right_sidebar {
+  width: 35%;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+/* End Right sidebar */
 
 /* main */
 
